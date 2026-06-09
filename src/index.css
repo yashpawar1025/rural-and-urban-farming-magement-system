@@ -1,0 +1,284 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Minimal Aesthetic - Softer, more refined palette */
+    /* Primary green - softer tone */
+    --primary: 142 35% 40%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary - lighter, more airy */
+    --secondary: 142 30% 65%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Background - maximum airiness */
+    --background: 0 0% 99%;
+    --foreground: 0 0% 20%;
+    
+    /* Card - subtle elevation with minimal contrast */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+    
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+    
+    /* Accent - extremely subtle */
+    --accent: 142 15% 96%;
+    --accent-foreground: 142 35% 40%;
+    
+    /* Muted - gentle contrast */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 50%;
+    
+    /* Destructive - softer red */
+    --destructive: 0 50% 55%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Border - barely visible */
+    --border: 0 0% 92%;
+    --input: 0 0% 92%;
+    --ring: 142 35% 40%;
+    
+    /* Radius for minimal aesthetic - softer corners */
+    --radius: 0.5rem;
+    
+    /* Chart colors - harmonious palette */
+    --chart-1: 142 43% 33%;
+    --chart-2: 142 43% 58%;
+    --chart-3: 200 60% 50%;
+    --chart-4: 45 90% 60%;
+    --chart-5: 280 50% 55%;
+    
+    /* Sidebar colors */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 142 30% 15%;
+    --sidebar-primary: 142 43% 33%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 90 45% 92%;
+    --sidebar-accent-foreground: 142 43% 33%;
+    --sidebar-border: 90 25% 85%;
+    --sidebar-ring: 142 43% 33%;
+  }
+
+  .dark {
+    --primary: 142 43% 58%;
+    --primary-foreground: 142 30% 10%;
+    
+    --secondary: 142 35% 35%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --background: 142 30% 8%;
+    --foreground: 90 30% 95%;
+    
+    --card: 142 25% 12%;
+    --card-foreground: 90 30% 95%;
+    
+    --popover: 142 25% 12%;
+    --popover-foreground: 90 30% 95%;
+    
+    --accent: 142 30% 18%;
+    --accent-foreground: 142 43% 58%;
+    
+    --muted: 142 20% 20%;
+    --muted-foreground: 90 20% 65%;
+    
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 142 20% 20%;
+    --input: 142 20% 20%;
+    --ring: 142 43% 58%;
+    
+    --chart-1: 142 43% 58%;
+    --chart-2: 142 35% 45%;
+    --chart-3: 200 50% 55%;
+    --chart-4: 45 80% 65%;
+    --chart-5: 280 45% 60%;
+    
+    --sidebar-background: 142 25% 12%;
+    --sidebar-foreground: 90 30% 95%;
+    --sidebar-primary: 142 43% 58%;
+    --sidebar-primary-foreground: 142 30% 10%;
+    --sidebar-accent: 142 30% 18%;
+    --sidebar-accent-foreground: 142 43% 58%;
+    --sidebar-border: 142 20% 20%;
+    --sidebar-ring: 142 43% 58%;
+  }
+}
+
+@layer base {
+  /* Minimal Aesthetic - Remove heavy shadows and decorative effects */
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.6;
+  }
+  
+  /* Refined typography hierarchy */
+  h1 {
+    @apply text-4xl font-light tracking-tight;
+    letter-spacing: -0.02em;
+  }
+  
+  h2 {
+    @apply text-3xl font-light tracking-tight;
+    letter-spacing: -0.015em;
+  }
+  
+  h3 {
+    @apply text-2xl font-normal tracking-tight;
+  }
+  
+  h4 {
+    @apply text-xl font-normal;
+  }
+  
+  h5 {
+    @apply text-lg font-medium;
+  }
+  
+  h6 {
+    @apply text-base font-medium;
+  }
+  
+  /* Increase whitespace */
+  p {
+    @apply mb-4;
+  }
+  
+  /* Subtle, non-sharp focus rings */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism - softer for minimal aesthetic */
+  .glass {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Minimal card - no 3D effects, subtle elevation only */
+  .card-minimal {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .card-minimal:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transform: translateY(-2px);
+  }
+  
+  /* Animated gradient background */
+  .gradient-animate {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)));
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+  
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Fade-in animations for hero sections */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-delay {
+    animation: fadeIn 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  /* Seasonal hero specific styles */
+  .seasonal-hero {
+    min-height: 180px;
+    position: relative;
+  }
+
+  .seasonal-hero-bg {
+    will-change: transform;
+  }
+
+  /* Smooth parallax performance optimization */
+  @media (prefers-reduced-motion: reduce) {
+    .seasonal-hero-bg {
+      transform: none !important;
+      transition: none !important;
+    }
+    
+    .animate-fade-in,
+    .animate-fade-in-delay {
+      animation: none !important;
+      opacity: 1 !important;
+    }
+  }
+  
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  
+  /* Parallax container */
+  .parallax {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Hover lift effect */
+  .hover-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+}

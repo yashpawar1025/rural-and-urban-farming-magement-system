@@ -1,0 +1,25 @@
+-- Insert crop encyclopedia data
+INSERT INTO crop_encyclopedia (name, image_url, soil_type, growing_season, expected_yield, recommended_fertilizers, description) VALUES
+('Wheat', 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400', 'Loamy', 'Winter/Spring', '3-4 tons/hectare', 'NPK 20-20-20, Urea', 'Wheat is a staple cereal grain grown worldwide. Requires well-drained loamy soil and moderate rainfall.'),
+('Rice', 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400', 'Clay', 'Summer/Monsoon', '4-5 tons/hectare', 'NPK 15-15-15, Organic compost', 'Rice is a primary food crop requiring flooded fields and warm temperatures.'),
+('Corn', 'https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=400', 'Sandy Loam', 'Spring/Summer', '8-10 tons/hectare', 'NPK 18-46-0, Potash', 'Corn thrives in warm weather with adequate moisture and well-drained soil.'),
+('Tomato', 'https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=400', 'Loamy', 'Spring/Summer', '50-60 tons/hectare', 'NPK 10-10-10, Calcium nitrate', 'Tomatoes require full sun, consistent watering, and support structures.'),
+('Potato', 'https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=400', 'Sandy Loam', 'Spring/Fall', '20-25 tons/hectare', 'NPK 5-10-10, Sulfur', 'Potatoes grow best in cool weather with loose, well-drained soil.'),
+('Lettuce', 'https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?w=400', 'Loamy', 'Spring/Fall', '15-20 tons/hectare', 'NPK 10-5-5, Fish emulsion', 'Lettuce is a cool-season crop ideal for urban gardens and small spaces.'),
+('Carrot', 'https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=400', 'Sandy', 'Spring/Fall', '30-40 tons/hectare', 'NPK 5-10-10, Bone meal', 'Carrots need deep, loose soil free of rocks for straight root development.'),
+('Spinach', 'https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=400', 'Loamy', 'Spring/Fall', '10-15 tons/hectare', 'NPK 10-10-10, Compost', 'Spinach is a fast-growing leafy green rich in nutrients.'),
+('Cucumber', 'https://images.unsplash.com/photo-1604977042946-1eecc30f269e?w=400', 'Loamy', 'Summer', '40-50 tons/hectare', 'NPK 10-10-10, Manure', 'Cucumbers require warm temperatures, full sun, and consistent moisture.'),
+('Bell Pepper', 'https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?w=400', 'Loamy', 'Summer', '25-30 tons/hectare', 'NPK 5-10-10, Calcium', 'Bell peppers need warm weather and well-drained soil with regular feeding.');
+
+-- Insert government schemes data
+INSERT INTO government_schemes (scheme_name, scheme_type, description, eligibility, application_deadline, link) VALUES
+('National Agricultural Insurance Scheme', 'insurance', 'Comprehensive crop insurance covering yield losses due to natural calamities, pests, and diseases.', 'All farmers owning agricultural land', '2026-06-30', 'https://agriculture.gov/insurance'),
+('Farm Mechanization Subsidy', 'subsidy', 'Financial assistance for purchasing tractors, harvesters, and other farm equipment.', 'Small and marginal farmers with landholding up to 5 hectares', '2026-08-15', 'https://agriculture.gov/mechanization'),
+('Organic Farming Promotion Grant', 'subsidy', 'Grants for farmers transitioning to organic farming practices and certification.', 'Farmers committed to organic farming for minimum 3 years', '2026-07-20', 'https://agriculture.gov/organic'),
+('Agricultural Credit Facility', 'loan', 'Low-interest loans for crop production, equipment purchase, and farm infrastructure development.', 'All registered farmers with valid land documents', '2026-12-31', 'https://agriculture.gov/credit'),
+('Drip Irrigation Subsidy', 'subsidy', 'Financial support for installing drip irrigation systems to conserve water.', 'Farmers in water-scarce regions', '2026-09-30', 'https://agriculture.gov/irrigation'),
+('Livestock Insurance Program', 'insurance', 'Insurance coverage for cattle, poultry, and other livestock against death and disease.', 'Farmers owning livestock', '2026-10-15', 'https://agriculture.gov/livestock-insurance'),
+('Seed Subsidy Scheme', 'subsidy', 'Subsidized high-quality seeds for major crops to improve productivity.', 'All farmers', '2026-05-31', 'https://agriculture.gov/seeds'),
+('Farm Storage Infrastructure Loan', 'loan', 'Loans for building warehouses and cold storage facilities.', 'Farmers and farmer cooperatives', '2026-11-30', 'https://agriculture.gov/storage'),
+('Solar Pump Subsidy', 'subsidy', 'Financial assistance for installing solar-powered water pumps.', 'Farmers in areas with unreliable electricity', '2026-08-31', 'https://agriculture.gov/solar'),
+('Crop Diversification Support', 'subsidy', 'Incentives for farmers diversifying from traditional crops to high-value crops.', 'Farmers willing to adopt new crops', '2026-07-15', 'https://agriculture.gov/diversification');
